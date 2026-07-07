@@ -13,18 +13,20 @@ Quick Index Generator is a small Obsidian plugin that generates a Markdown index
 
 ## Installation
 
-### Manual install
+### Install from a release
 
-1. Download this repository.
-2. Copy the folder into your vault:
+1. Open the latest release on GitHub.
+2. Download `quick-index-generator-<version>.zip` from the release assets.
+3. Unzip the file. You should get a folder named `quick-index-generator`.
+4. Drag the `quick-index-generator` folder into your Obsidian vault:
 
    ```text
    <your-vault>/.obsidian/plugins/quick-index-generator
    ```
 
-3. Restart Obsidian.
-4. Open `Settings -> Community plugins`.
-5. Enable `Quick Index Generator`.
+5. Restart Obsidian.
+6. Open `Settings -> Community plugins`.
+7. Enable `Quick Index Generator`.
 
 ## Usage
 
@@ -59,18 +61,20 @@ Quick Index Generator 是一个轻量级 Obsidian 插件，用来为当前 vault
 
 ## 安装
 
-### 手动安装
+### 从 Release 安装
 
-1. 下载这个仓库。
-2. 将整个文件夹复制到你的 Obsidian vault：
+1. 打开 GitHub 上的最新 release。
+2. 在 release assets 里下载 `quick-index-generator-<version>.zip`。
+3. 解压这个文件，你应该会得到一个名为 `quick-index-generator` 的文件夹。
+4. 将 `quick-index-generator` 文件夹拖放到你的 Obsidian vault：
 
    ```text
    <你的vault>/.obsidian/plugins/quick-index-generator
    ```
 
-3. 重启 Obsidian。
-4. 打开 `设置 -> 第三方插件/社区插件`。
-5. 启用 `Quick Index Generator`。
+5. 重启 Obsidian。
+6. 打开 `设置 -> 第三方插件/社区插件`。
+7. 启用 `Quick Index Generator`。
 
 ## 使用方法
 
