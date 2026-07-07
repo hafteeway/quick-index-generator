@@ -91,7 +91,9 @@ module.exports = class QuickIndexGeneratorPlugin extends Plugin {
 
       const indexMarkdown = this.buildIndexMarkdown(targetFile.path);
       const original = await this.app.vault.read(targetFile);
-      const updated = this.replacePreviousIndex(original, indexMarkdown) || this.appendIndex(original, indexMarkdown);
+      const updated = this.isGeneratedIndexOnlyContent(original)
+        ? `${indexMarkdown}\n`
+        : this.replacePreviousIndex(original, indexMarkdown) || this.appendIndex(original, indexMarkdown);
 
       if (updated === original && indexMarkdown === this.data.lastIndexMarkdown) {
         return;
@@ -199,6 +201,10 @@ module.exports = class QuickIndexGeneratorPlugin extends Plugin {
       return oldMarkerReplacement;
     }
 
+    if (this.isGeneratedIndexOnlyContent(original)) {
+      return `${indexMarkdown}\n`;
+    }
+
     const previousReplacement = this.replacePreviousIndex(original, indexMarkdown);
     if (previousReplacement !== null) {
       return previousReplacement;
@@ -222,7 +228,7 @@ module.exports = class QuickIndexGeneratorPlugin extends Plugin {
       return null;
     }
 
-    const previousIndex = original.indexOf(this.data.lastIndexMarkdown);
+    const previousIndex = original.lastIndexOf(this.data.lastIndexMarkdown);
     if (previousIndex === -1) {
       return null;
     }
@@ -230,6 +236,21 @@ module.exports = class QuickIndexGeneratorPlugin extends Plugin {
     const before = original.slice(0, previousIndex);
     const after = original.slice(previousIndex + this.data.lastIndexMarkdown.length);
     return `${before}${indexMarkdown}${after}`;
+  }
+
+  isGeneratedIndexOnlyContent(content) {
+    const meaningfulLines = content
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (meaningfulLines.length === 0) {
+      return false;
+    }
+
+    return meaningfulLines.every((line) => {
+      return /^#{1,6}\s+\S/.test(line) || /^-\s+\[\[.+\]\](（当前笔记）)?$/.test(line);
+    });
   }
 
   appendIndex(original, indexMarkdown) {

@@ -1,7 +1,7 @@
 {
   "id": "quick-index-generator",
   "name": "Quick Index Generator",
-  "version": "1.1.1",
+  "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Generate or update a grouped Markdown index in the current note.",
   "author": "Hafteeway",
