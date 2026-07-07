@@ -189,11 +189,8 @@ module.exports = class QuickIndexGeneratorPlugin extends Plugin {
   }
 
   createWikiLink(file, basenameCounts) {
-    if ((basenameCounts.get(file.basename) || 0) > 1) {
-      return `[[${file.path.replace(/\.md$/, "")}|${file.basename}]]`;
-    }
-
-    return `[[${file.basename}]]`;
+    const path = file.path.replace(/\.md$/, "");
+    return `[[${path}|${file.basename}]]`;
   }
 
   applyIndexToContent(original, indexMarkdown, view) {
