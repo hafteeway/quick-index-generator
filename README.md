@@ -34,6 +34,10 @@ Quick Index Generator is a small Obsidian plugin that generates a Markdown index
 4. Later runs replace the previous index content.
 5. When a new Markdown note is created, the plugin updates the last index location automatically.
 
+## Acknowledgements
+
+This plugin was developed with assistance from OpenAI Codex.
+
 ## License
 
 MIT
@@ -75,6 +79,10 @@ Quick Index Generator 是一个轻量级 Obsidian 插件，用来为当前 vault
 3. 第一次运行时，插件会在当前光标位置插入索引。
 4. 之后再次运行，会替换上一次生成的索引内容。
 5. 当你新建 Markdown 笔记后，插件会自动更新上次生成索引的位置。
+
+## 致谢
+
+这个插件在 OpenAI Codex 的辅助下完成开发。
 
 ## 许可证
 
