@@ -16,11 +16,11 @@ module.exports = class QuickIndexGeneratorPlugin extends Plugin {
 
     this.addCommand({
       id: "generate-or-update-current-note-index",
-      name: "生成/更新当前笔记索引",
+      name: "Generate/Update Current Note Index / 生成/更新当前笔记索引",
       callback: () => this.generateIndexInCurrentNote()
     });
 
-    this.addRibbonIcon("list-tree", "生成/更新当前笔记索引", () => {
+    this.addRibbonIcon("list-tree", "Generate/Update Current Note Index / 生成/更新当前笔记索引", () => {
       this.generateIndexInCurrentNote();
     });
 

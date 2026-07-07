@@ -29,15 +29,10 @@ Quick Index Generator is a small Obsidian plugin that generates a Markdown index
 ## Usage
 
 1. Open the note where you want the index to appear.
-2. Run the command `生成/更新当前笔记索引` from the command palette.
+2. Run the command `Generate/Update Current Note Index / 生成/更新当前笔记索引` from the command palette.
 3. The plugin inserts the index at the cursor position on first run.
 4. Later runs replace the previous index content.
 5. When a new Markdown note is created, the plugin updates the last index location automatically.
-
-## Notes
-
-- The plugin stores its local state in Obsidian plugin data. Do not commit `data.json`.
-- This plugin is designed for personal vault organization and does not require a build step.
 
 ## License
 
@@ -76,15 +71,10 @@ Quick Index Generator 是一个轻量级 Obsidian 插件，用来为当前 vault
 ## 使用方法
 
 1. 打开你想放置索引的笔记。
-2. 在命令面板中运行 `生成/更新当前笔记索引`。
+2. 在命令面板中运行 `Generate/Update Current Note Index / 生成/更新当前笔记索引`。
 3. 第一次运行时，插件会在当前光标位置插入索引。
 4. 之后再次运行，会替换上一次生成的索引内容。
 5. 当你新建 Markdown 笔记后，插件会自动更新上次生成索引的位置。
-
-## 注意事项
-
-- 插件会把本地状态存到 Obsidian 插件数据中，请不要提交 `data.json`。
-- 这个插件面向个人 vault 整理，不需要构建步骤。
 
 ## 许可证
 
